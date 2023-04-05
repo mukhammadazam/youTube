@@ -1,17 +1,27 @@
-import "./Navbar.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FiSearch } from "react-icons/fi";
 import { BsCameraReels } from "react-icons/bs";
 import { GiAbstract063 } from "react-icons/gi";
+import { MyContext } from "../context/Context";
+import { FiSearch } from "react-icons/fi";
+import userpic from "./imges/userpic.svg";
 import logo from "./imges/logo.svg";
 import path from "./imges/ui-11.svg";
-import userpic from "./imges/userpic.svg";
+import { useContext } from "react";
+import "./Navbar.scss";
 const Navbar = () => {
+  const { togle, setTogle } = useContext(MyContext);
+  const togleFun = () => {
+    setTogle(!togle);
+    console.log(togle);
+  };
   return (
     <div className='navbar '>
       <div className='flex items-center justify-between bg-light '>
         <div className='nav flex items-center '>
-          <GiHamburgerMenu className='nav__burger hidden md:block' />
+          <GiHamburgerMenu
+            onClick={togleFun}
+            className='nav__burger hidden md:block'
+          />
           <img className='px-0 pe-1 sm:px-10' src={logo} alt='logo' />
           <div className='nav__enner relative'>
             <input

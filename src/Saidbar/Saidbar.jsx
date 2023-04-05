@@ -1,77 +1,134 @@
-import "./Saidbar.scss";
-
-
-import { NavLink } from "react-router-dom";
+import { MdSubscriptions, MdOutlineVideoLibrary } from "react-icons/md";
+import { FiCopy, FiFile, FiChevronDown } from "react-icons/fi";
+import { GrHomeRounded, GrGamepad } from "react-icons/gr";
+import { VscFileSubmodule } from "react-icons/vsc";
+import { NavLink, Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { DiCodeigniter } from "react-icons/di";
-import { FiCopy, FiFile, FiChevronDown } from "react-icons/fi";
-import { VscFileSubmodule } from "react-icons/vsc";
-import { SiTimescale } from "react-icons/si";
-import { BsStar } from "react-icons/bs";
-import { BiHeart } from "react-icons/bi";
 import { CiMusicNote1 } from "react-icons/ci";
-import { GrGamepad } from "react-icons/gr";
+import { SiTimescale } from "react-icons/si";
+import { BiHeart } from "react-icons/bi";
+import { BsStar } from "react-icons/bs";
+import shorts from "./img/shorts.svg";
+import oval1 from "./img/oval1.svg";
+import oval2 from "./img/oval2.svg";
+import oval3 from "./img/oval3.svg";
+import oval4 from "./img/oval4.svg";
+import oval5 from "./img/oval5.svg";
+import oval6 from "./img/oval6.svg";
+import "./Saidbar.scss";
+import { useContext } from "react";
+import { MyContext } from "../context/Context";
 const Saidbar = () => {
+  const { togle } = useContext(MyContext);
+
   return (
-    <div className='bar '>
-      <NavLink className='bar__link flex items-center'>
-        <AiOutlineHome className='icons' />
-        <span className='bar__text block w-20'>Home</span>
-      </NavLink>
+    <>
+      {!togle ? (
+        <div className={`minu`}>
+          <NavLink className=''>
+            <GrHomeRounded className='icons1' />
+            <span className='pb-3 bar__text block w-8'>Главная</span>
+          </NavLink>
+          <NavLink className=''>
+            <img className='icons1' src={shorts} alt='img' />
+            <span className='pb-3 bar__text block w-8'>Shorts</span>
+          </NavLink>
+          <NavLink className=''>
+            <MdSubscriptions className='icons1' />
+            <span className='pb-3 bar__text block w-8'>Подписки</span>
+          </NavLink>
+          <NavLink className=''>
+            <MdOutlineVideoLibrary className='icons1' />
+            <span className='pb-3 bar__text block w-8'>Библиотика</span>
+          </NavLink>
+        </div>
+      ) : (
+        <div className={`bar`}>
+          <NavLink className='bar__link flex items-center'>
+            <AiOutlineHome className='icons' />
+            <span className='bar__text block w-20'>Home</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <DiCodeigniter className='icons' />
-        <span className='bar__text block w-20'>Trending</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <DiCodeigniter className='icons' />
+            <span className='bar__text block w-20'>Trending</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center pb-16'>
-        <FiCopy className='icons' />
-        <span className='bar__text block w-28'>Subscriptions</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center pb-16'>
+            <FiCopy className='icons' />
+            <span className='bar__text block w-28'>Subscriptions</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <VscFileSubmodule className='icons' />
-        <span className='bar__text block w-20'>Library</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <VscFileSubmodule className='icons' />
+            <span className='bar__text block w-20'>Library</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <FiFile className='icons' />
-        <span className='bar__text block w-20'>History</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <FiFile className='icons' />
+            <span className='bar__text block w-20'>History</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <SiTimescale className='icons' />
-        <span className='bar__text block w-24'>WatchLater</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <SiTimescale className='icons' />
+            <span className='bar__text block w-24'>WatchLater</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <BsStar className='icons' />
-        <span className='bar__text block w-24'>Favourites</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <BsStar className='icons' />
+            <span className='bar__text block w-24'>Favourites</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <BiHeart className='icons' />
-        <span className='bar__text block w-24'>LikedVideos</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <BiHeart className='icons' />
+            <span className='bar__text block w-24'>LikedVideos</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <CiMusicNote1 className='icons' />
-        <span className='bar__text block w-20'>Music</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <CiMusicNote1 className='icons' />
+            <span className='bar__text block w-20'>Music</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <GrGamepad className='icons' />
-        <span className='bar__text block w-20'>Games</span>
-      </NavLink>
+          <NavLink className='bar__link flex items-center'>
+            <GrGamepad className='icons' />
+            <span className='bar__text block w-20'>Games</span>
+          </NavLink>
 
-      <NavLink className='bar__link flex items-center'>
-        <FiChevronDown className='icons' />
-        <span className='bar__text block w-24'>Show more</span>
-      </NavLink>
-      <div className='sub'>
-        <p className='sub__text w-24'>Subscriptions</p>
-      </div>
-    </div>
+          <NavLink className='bar__link flex items-center'>
+            <FiChevronDown className='icons' />
+            <span className='bar__text block w-24'>Show more</span>
+          </NavLink>
+          <div className='sub'>
+            <p className='sub__text pb-5 w-24'>Subscriptions</p>
+            <div className='flex items-center'>
+              <img src={oval6} className='w-9' alt='oval' />
+              <Link className='w-32'>Gussie Singleton</Link>
+            </div>
+            <div className='flex items-center pt-4'>
+              <img src={oval5} className='w-9' alt='oval' />
+              <Link className='w-28'>Nora Francis</Link>
+            </div>
+            <div className='flex items-center pt-4'>
+              <img src={oval4} className='w-9' alt='oval' />
+              <Link className='w-28'>Belle Briggs</Link>
+            </div>
+            <div className='flex items-center pt-4'>
+              <img src={oval3} className='w-9' alt='oval' />
+              <Link className='w-28'>Eunice Cortez</Link>
+            </div>
+            <div className='flex items-center pt-4'>
+              <img src={oval2} className='w-9' alt='oval' />
+              <Link className='w-28'>Emma Hanson</Link>
+            </div>
+            <div className='flex items-center pt-4'>
+              <img src={oval1} className='w-9' alt='oval' />
+              <Link className='w-28'>Leah Berry</Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
