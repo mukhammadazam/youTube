@@ -1,0 +1,45 @@
+.navbar{
+  background-color: #fff;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  padding: 20px 0;
+}
+.nav {
+  background-color: #fff;
+  &__burger {
+    width: 40px;
+    height: 40px;
+  }
+  &__enner {
+    width: 100%;
+}
+&__input {
+    display: block ;
+    width: 100% ;
+    max-width: 500px ;
+    padding: 12px 0 12px 23px ;
+    outline: none;
+    background: #ebebeb; 
+    border-radius: 22px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #30384c;
+    opacity: 0.4;
+  }
+  &__vedio {
+    width: 37px;
+    height: 25px;
+  }
+  &__cubik {
+    width: 37px;
+    height: 25px;
+  }
+  &__qun {
+    width: 37px;
+    height: 25px;
+  }
+  &__log{
+    opacity: 0.3;
+  }
+}
