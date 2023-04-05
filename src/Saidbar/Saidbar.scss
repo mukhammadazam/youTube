@@ -1,12 +1,18 @@
-
-.bar{
-    &__link{
-        display: block;
-        padding-bottom: 29px;
-    }
+.bar {
+  &__link {
+    display: block;
+    padding-bottom: 29px;
+  }
 }
-.icons{
-    width: 30px;
-    height: 30px;
-    opacity: 0.6;
+.icons {
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+}
+.sub {
+  &__text {
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+  }
 }
