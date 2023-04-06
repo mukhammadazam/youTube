@@ -13,10 +13,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Card />} />
-      </Routes>
-      <Saidbar />
+      <div className=''>
+        <Saidbar />
+        <Routes>
+          <Route path='/' element={<Card />} />
+        </Routes>
+      </div>
     </>
   );
 }

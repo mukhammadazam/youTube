@@ -12,7 +12,6 @@ const Navbar = () => {
   const { togle, setTogle } = useContext(MyContext);
   const togleFun = () => {
     setTogle(!togle);
-    console.log(togle);
   };
   return (
     <div className='navbar '>
