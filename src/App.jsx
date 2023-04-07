@@ -9,6 +9,7 @@ import Saidbar from "./Saidbar/Saidbar";
 import Cards from "./cards/Cards";
 import Potpis from "./potpiska/Potpis";
 import Shorts from "./shorts/Shorts";
+import Biblet from "./biblet/Biblet";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<Card />} />
           <Route path='/shorts' element={<Shorts />} />
           <Route path='/pat' element={<Potpis />} />
+          <Route path='/biblet' element={<Biblet />} />
           {/* <Route path='/' element={<Cards />} /> */}
         </Routes>
       </div>

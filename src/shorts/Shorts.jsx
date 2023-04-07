@@ -1,7 +1,7 @@
-import { useContext } from "react"
 import { MyContext } from "../context/Context";
+import { useContext } from "react";
 const Shorts = () => {
-    const {data}=useContext(MyContext);
+  const { data } = useContext(MyContext);
   return (
     <div>
       {data.slice(21, 31).map((i, el) => (
@@ -17,6 +17,6 @@ const Shorts = () => {
       ))}
     </div>
   );
-}
+};
 
-export default Shorts
+export default Shorts;

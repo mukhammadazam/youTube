@@ -38,7 +38,7 @@ const Saidbar = () => {
             <MdSubscriptions className='icons1' />
             <span className='pb-3 bar__text block w-8'>Подписки</span>
           </NavLink>
-          <NavLink className=''>
+          <NavLink to='/biblet' className=''>
             <MdOutlineVideoLibrary className='icons1' />
             <span className='pb-3 bar__text block w-8'>Библиотика</span>
           </NavLink>
