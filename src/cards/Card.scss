@@ -1,7 +1,23 @@
 .cart {
-  overflow-x: scroll;
-   scrollbar-color: rebeccapurple green;
+ 
+    overflow-x: scroll;
 }
+       ::-webkit-scrollbar {
+        width: 2px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background: rgb(11, 8, 8);
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background: rgb(63, 63, 65);
+        border-radius: 15px;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: rgb(5, 15, 5);
+    }
 .title {
   font-size: 26px;
   line-height: 33px;

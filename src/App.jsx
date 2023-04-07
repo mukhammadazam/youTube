@@ -6,21 +6,27 @@ import "./App.css";
 import Card from "./cards/Card";
 import Navbar from "./navbar/Navbar";
 import Saidbar from "./Saidbar/Saidbar";
+import Cards from "./cards/Cards";
+import Shorts from "./cards/shorts/Shorts";
+import Potpis from "./potpiska/Potpis";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
-      <Navbar  />
-    <div className='grid grid-rows-1 grid-flow-col'>
-      <Saidbar />
-      <Routes>
-        <Route path='/' element={<Card />} />
-      </Routes>
-    </div>
+      <Navbar />
+      <div className='grid grid-rows-1 grid-flow-col'>
+        <Saidbar />
+        <Routes className='flex-col'>
+          <Route path='/' element={<Card />} />
+          <Route path='/shorts' element={<Shorts />} />
+          <Route path='/pat' element={<Potpis />} />
+          {/* <Route path='/' element={<Cards />} /> */}
+        </Routes>
+      </div>
     </>
-  );  
+  );
 }
 
 export default App;

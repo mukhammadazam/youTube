@@ -26,15 +26,15 @@ const Saidbar = () => {
     <>
       {!togle ? (
         <div className={`minu`}>
-          <NavLink className=''>
+          <NavLink to='/' className=''>
             <GrHomeRounded className='icons1' />
             <span className='pb-3 bar__text block w-8'>Главная</span>
           </NavLink>
-          <NavLink className=''>
+          <NavLink to='shorts' className=''>
             <img className='icons1' src={shorts} alt='img' />
             <span className='pb-3 bar__text block w-8'>Shorts</span>
           </NavLink>
-          <NavLink className=''>
+          <NavLink to='/pat' className=''>
             <MdSubscriptions className='icons1' />
             <span className='pb-3 bar__text block w-8'>Подписки</span>
           </NavLink>
