@@ -1,6 +1,5 @@
 import { useContext } from "react"
-import { MyContext } from "../../context/Context"
-
+import { MyContext } from "../context/Context";
 const Shorts = () => {
     const {data}=useContext(MyContext);
   return (

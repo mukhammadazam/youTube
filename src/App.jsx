@@ -7,8 +7,8 @@ import Card from "./cards/Card";
 import Navbar from "./navbar/Navbar";
 import Saidbar from "./Saidbar/Saidbar";
 import Cards from "./cards/Cards";
-import Shorts from "./cards/shorts/Shorts";
 import Potpis from "./potpiska/Potpis";
+import Shorts from "./shorts/Shorts";
 
 function App() {
   // const [count, setCount] = useState(0);

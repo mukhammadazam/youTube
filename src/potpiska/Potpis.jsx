@@ -5,7 +5,7 @@ import "./Potpis.scss";
 const Potpis = () => {
   const { data } = useContext(MyContext);
   return (
-    <div className='grid grid-rows-3  grid-flow-col grid-cols-3 gap-4'>
+    <div className='grid grid-rows-3 justify-center lg:grid-cols-4   grid-cols-2 gap-4'>
       {data.slice(21, 38).map((i, el) => (
         <div key={el} className='pb-10'>
           <iframe
