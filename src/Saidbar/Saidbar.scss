@@ -1,5 +1,13 @@
+.minu {
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  padding-right: 100px;
+}
 .bar {
-
+  position: sticky;
+  top: 0;
+  height: 10vh;
   &__link {
     display: block;
     padding-bottom: 29px;
@@ -19,5 +27,14 @@
     font-size: 18px;
     line-height: 23px;
     color: #000000;
+  }
+}
+
+@media screen and (max-width:576px){
+  .minu{
+    display: none;
+  }
+  .bar{
+    display: none;
   }
 }

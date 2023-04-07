@@ -1,12 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useState } from "react";
-import { Virtual } from "swiper";
-import "swiper/css/virtual";
+import { memo, useEffect, useState } from "react";
+import oval6 from "../Saidbar/img/oval6.svg";
 import axios from "axios";
-import "swiper/css";
+import "./Card.scss";
 const Card = () => {
   const [data, setData] = useState([]);
-
   const options = {
     method: "GET",
     url: "https://youtube-v31.p.rapidapi.com/captions",
@@ -26,23 +23,27 @@ const Card = () => {
         console.error(error);
       });
   }, []);
-  
   return (
-    <div className='flex relative start-52'>
-      <Swiper modules={[Virtual]} spaceBetween={50} slidesPerView={3} virtual>
-        {data.map((slideContent, index) => (
-          <SwiperSlide key={slideContent} virtualIndex={index}>
+    <>
+      <img className='w-9 absolute sm:start-80' src={oval6} alt='img' />
+      <h1 className='ps-3 absolute start-20 sm:start-96 m-0 title'>
+        Hello World
+      </h1>
+
+      <div className='flex  gap-5 cart pt-10'>
+        {data.map((i, el) => (
+          <div key={el}>
             <iframe
               width='250'
-              height='150'
-              src={`https://www.youtube.com/embed/${slideContent.snippet.videoId}`}
+              height='250'
+              src={`https://www.youtube.com/embed/${i.snippet.videoId}`}
               title='YouTube video player'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default Card;
+export default memo(Card);

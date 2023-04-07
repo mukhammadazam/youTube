@@ -14,8 +14,8 @@ const Navbar = () => {
     setTogle(!togle);
   };
   return (
-    <div className='navbar '>
-      <div className='flex items-center justify-between bg-light '>
+    <div className='navbar bg-light '>
+      <div className='flex  items-center justify-between  '>
         <div className='nav flex items-center '>
           <GiHamburgerMenu
             onClick={togleFun}
