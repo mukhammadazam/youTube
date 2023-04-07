@@ -9,7 +9,7 @@ const Shorts = () => {
         <div key={el} className='pb-10'>
           <iframe
             className='rounded'
-            width='500'
+            max-width='500'
             height='600'
             src={`https://www.youtube.com/embed/${i.video.videoId}`}
             title='YouTube video player'
