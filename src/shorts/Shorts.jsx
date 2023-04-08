@@ -1,5 +1,5 @@
 import { MyContext } from "../context/Context";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 const Shorts = () => {
   const { data } = useContext(MyContext);
   return (
@@ -19,4 +19,4 @@ const Shorts = () => {
   );
 };
 
-export default Shorts;
+export default memo(Shorts);

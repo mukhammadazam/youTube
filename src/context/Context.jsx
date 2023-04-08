@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from "react";
 export const MyContext = createContext();
 export const Myprovayder = ({ children }) => {
   const [togle, setTogle] = useState(false);
+  const [vedio,setVedio]=useState(false);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -43,7 +44,7 @@ export const Myprovayder = ({ children }) => {
   //   }
   // });
   return (
-    <MyContext.Provider value={{ togle, setTogle, data }}>
+    <MyContext.Provider value={{ togle, setTogle, data,vedio,setVedio }}>
       {children}
     </MyContext.Provider>
   );

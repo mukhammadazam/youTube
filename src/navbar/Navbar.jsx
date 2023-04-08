@@ -9,10 +9,13 @@ import path from "./imges/ui-11.svg";
 import { useContext } from "react";
 import "./Navbar.scss";
 const Navbar = () => {
-  const { togle, setTogle } = useContext(MyContext);
+  const { togle, setTogle,vedio,setVedio } = useContext(MyContext);
   const togleFun = () => {
     setTogle(!togle);
   };
+  const vediioFun=()=>{
+    setVedio(!vedio)
+  }
   return (
     <div className='navbar bg-light '>
       <div className='flex  items-center justify-between  '>
@@ -32,8 +35,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className='flex items-center gap-5'>
-          <BsCameraReels className=' nav__vedio none hidden md:block' />
-          <GiAbstract063 className='nav__cubik none hidden md:block' />
+          <BsCameraReels onClick={vediioFun} className=' nav__vedio none hidden md:block' />
           <img className='nav__qund hidden md:block' src={path} alt='msv' />
           <img className=' ps-1 ' src={userpic} alt='msv' />
         </div>

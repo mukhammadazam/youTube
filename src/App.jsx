@@ -10,6 +10,7 @@ import Cards from "./cards/Cards";
 import Potpis from "./potpiska/Potpis";
 import Shorts from "./shorts/Shorts";
 import Biblet from "./biblet/Biblet";
+import Vedio from "./vedio/Vedio";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Vedio />
       <div className='grid grid-rows-1 grid-flow-col'>
         <Saidbar />
         <Routes className='flex-col'>
@@ -24,6 +26,7 @@ function App() {
           <Route path='/shorts' element={<Shorts />} />
           <Route path='/pat' element={<Potpis />} />
           <Route path='/biblet' element={<Biblet />} />
+
           {/* <Route path='/' element={<Cards />} /> */}
         </Routes>
       </div>
