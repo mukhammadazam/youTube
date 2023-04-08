@@ -9,6 +9,7 @@ import Shorts from "./shorts/Shorts";
 import Biblet from "./biblet/Biblet";
 import Vedio from "./vedio/Vedio";
 import History from "./history/History";
+import Watch from "./watch/Watch";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
           <Route path='/pat' element={<Potpis />} />
           <Route path='/biblet' element={<Biblet />} />
           <Route path='/history' element={<History />} />
+          <Route path='/watch' element={<Watch />} />
         </Routes>
       </div>
     </>

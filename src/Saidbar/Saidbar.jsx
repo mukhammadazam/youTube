@@ -70,7 +70,7 @@ const Saidbar = () => {
             <span className='bar__text block w-20'>History</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/watch' className='bar__link flex items-center'>
             <SiTimescale className='icons' />
             <span className='bar__text block w-24'>WatchLater</span>
           </NavLink>
