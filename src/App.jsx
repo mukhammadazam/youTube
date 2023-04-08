@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Card from "./cards/Card";
 import Navbar from "./navbar/Navbar";
 import Saidbar from "./Saidbar/Saidbar";
-import Cards from "./cards/Cards";
 import Potpis from "./potpiska/Potpis";
 import Shorts from "./shorts/Shorts";
 import Biblet from "./biblet/Biblet";
 import Vedio from "./vedio/Vedio";
+import History from "./history/History";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -26,8 +24,7 @@ function App() {
           <Route path='/shorts' element={<Shorts />} />
           <Route path='/pat' element={<Potpis />} />
           <Route path='/biblet' element={<Biblet />} />
-
-          {/* <Route path='/' element={<Cards />} /> */}
+          <Route path='/history' element={<History />} />
         </Routes>
       </div>
     </>

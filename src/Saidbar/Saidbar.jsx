@@ -45,27 +45,27 @@ const Saidbar = () => {
         </div>
       ) : (
         <div className={`bar`}>
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/' className='bar__link flex items-center'>
             <AiOutlineHome className='icons' />
             <span className='bar__text block w-20'>Home</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/shorts' className='bar__link flex items-center'>
             <DiCodeigniter className='icons' />
             <span className='bar__text block w-20'>Trending</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center pb-16'>
+          <NavLink to='/pat' className='bar__link flex items-center pb-16'>
             <FiCopy className='icons' />
             <span className='bar__text block w-28'>Subscriptions</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/biblet' className='bar__link flex items-center'>
             <VscFileSubmodule className='icons' />
             <span className='bar__text block w-20'>Library</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/history' className='bar__link flex items-center'>
             <FiFile className='icons' />
             <span className='bar__text block w-20'>History</span>
           </NavLink>

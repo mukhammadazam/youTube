@@ -1,5 +1,5 @@
-import { useContext } from "react";
 import { MyContext } from "../context/Context";
+import { useContext } from "react";
 import { memo } from "react";
 import "./Card.scss";
 import oval6 from "../Saidbar/img/oval6.svg";
@@ -19,18 +19,16 @@ const Card = () => {
         return value;
       }
     })
-    .slice(0, 10)
+    .slice(0, 100)
     .map((i, el) => {
       return (
         <div key={el}>
-          <div className=''>
-            <iframe
-              className='rounded'
-              width='250'
-              height='250'
-              src={`https://www.youtube.com/embed/${i.video.videoId}`}
-              title='YouTube video player'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+          <div className='wrapper'>
+            <img
+              className=' rasm block'
+              src={i.video.thumbnails[0].url}
+              alt='img'
+            />
           </div>
           <Link>{i?.video.author.title}</Link>
         </div>
@@ -43,6 +41,7 @@ const Card = () => {
         Dollie Blair
       </h1>
 
+      <div className='flex  gap-5 cart pt-10'>{searchFunction}</div>
       <div className='flex  gap-5 cart pt-10'>{searchFunction}</div>
     </>
   );

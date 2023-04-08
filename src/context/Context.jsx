@@ -17,7 +17,7 @@ export const Myprovayder = ({ children }) => {
       "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
   };
-  const getData = () => {
+  const geta = () => {
 
     axios
     .request(options)
@@ -29,7 +29,7 @@ export const Myprovayder = ({ children }) => {
     });
   };
   useEffect(() => {
-getData()
+geta()
   }, []);
 
 
