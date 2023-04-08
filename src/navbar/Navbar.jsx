@@ -9,7 +9,7 @@ import path from "./imges/ui-11.svg";
 import { useContext } from "react";
 import "./Navbar.scss";
 const Navbar = () => {
-  const { togle, setTogle,vedio,setVedio } = useContext(MyContext);
+  const { togle, setTogle, vedio, setVedio,setSearch } =useContext(MyContext);
   const togleFun = () => {
     setTogle(!togle);
   };
@@ -27,6 +27,7 @@ const Navbar = () => {
           <img className='px-0 pe-1 sm:px-10' src={logo} alt='logo' />
           <div className='nav__enner relative'>
             <input
+              onChange={(e) => setSearch(e.target.value)}
               type='text'
               className='pe-10 md:pe-20   block nav__input max-w-[500px] '
               placeholder='Search'
@@ -35,7 +36,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className='flex items-center gap-5'>
-          <BsCameraReels onClick={vediioFun} className=' nav__vedio none hidden md:block' />
+          <BsCameraReels
+            onClick={vediioFun}
+            className=' nav__vedio none hidden md:block'
+          />
           <img className='nav__qund hidden md:block' src={path} alt='msv' />
           <img className=' ps-1 ' src={userpic} alt='msv' />
         </div>

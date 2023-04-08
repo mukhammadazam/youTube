@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from "react";
 export const MyContext = createContext();
 export const Myprovayder = ({ children }) => {
   const [togle, setTogle] = useState(false);
-  const [vedio,setVedio]=useState(false);
+  const [vedio,setVedio]=useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -36,15 +36,9 @@ export const Myprovayder = ({ children }) => {
 
   // console.log(obj);
 
-  // const searchFunction = data.filter((value) => {
-  //   if (search === "") {
-  //     return value;
-  //   } else if (value?.title.toLowerCase().includes(search?.toLowerCase())) {
-  //     return value;
-  //   }
-  // });
+
   return (
-    <MyContext.Provider value={{ togle, setTogle, data,vedio,setVedio }}>
+    <MyContext.Provider value={{ togle, setTogle, data,vedio,setVedio,search,setSearch }}>
       {children}
     </MyContext.Provider>
   );
