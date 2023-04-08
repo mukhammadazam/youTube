@@ -16,7 +16,7 @@ const Card = () => {
         return value;
       }
     })
-    .slice(0, 10)
+    .slice(0, 20)
     .map((i, el) => (
       <div key={el}>
         <div className=''>
