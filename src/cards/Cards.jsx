@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { MyContext } from "../context/Context";
+
 const Cards = () => {
-  const {data}=useContext(MyContext)
+  const { data } = useContext(MyContext);
   return (
     <div className='flex  gap-5 cart pt-10'>
-      {data.slice(11,21).map((i, el) => (
+      {data.slice(11, 21).map((i, el) => (
         <div key={el}>
           <iframe
             className='rounded'

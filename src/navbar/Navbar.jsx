@@ -9,13 +9,13 @@ import path from "./imges/ui-11.svg";
 import { useContext } from "react";
 import "./Navbar.scss";
 const Navbar = () => {
-  const { togle, setTogle, vedio, setVedio,setSearch } =useContext(MyContext);
+  const { togle, setTogle, vedio, setVedio, setSearch } = useContext(MyContext);
   const togleFun = () => {
     setTogle(!togle);
   };
-  const vediioFun=()=>{
-    setVedio(!vedio)
-  }
+  const vediioFun = () => {
+    setVedio(!vedio);
+  };
   return (
     <div className='navbar bg-light '>
       <div className='flex  items-center justify-between  '>

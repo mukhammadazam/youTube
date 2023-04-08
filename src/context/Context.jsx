@@ -1,9 +1,10 @@
 import axios from "axios";
 import { createContext, useState, useEffect } from "react";
 export const MyContext = createContext();
+
 export const Myprovayder = ({ children }) => {
   const [togle, setTogle] = useState(false);
-  const [vedio,setVedio]=useState(true);
+  const [vedio, setVedio] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -16,9 +17,9 @@ export const Myprovayder = ({ children }) => {
       "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
   };
-  useEffect(() => {
+  const getData = () => {
 
-  axios
+    axios
     .request(options)
     .then(function (response) {
       setData(response.data.contents);
@@ -26,7 +27,11 @@ export const Myprovayder = ({ children }) => {
     .catch(function (error) {
       console.error(error);
     });
+  };
+  useEffect(() => {
+getData()
   }, []);
+
 
   // const obj = {
   //   id: 1111,
@@ -36,9 +41,9 @@ export const Myprovayder = ({ children }) => {
 
   // console.log(obj);
 
-
   return (
-    <MyContext.Provider value={{ togle, setTogle, data,vedio,setVedio,search,setSearch }}>
+    <MyContext.Provider
+      value={{ togle, setTogle, data, vedio, setVedio, search, setSearch }}>
       {children}
     </MyContext.Provider>
   );
