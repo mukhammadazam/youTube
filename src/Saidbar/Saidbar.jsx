@@ -128,9 +128,9 @@ const Saidbar = () => {
           </div>
         </div>
       )}
-      <div className='bg-light'>
+      <div className='bg-inherit '>
         <div
-          className={`minu1 flex items-center  justify-between fixed top-50 bg-inherit`}>
+          className={`minu1 py-3   fixed  `}>
           <NavLink to='/' className=''>
             <GrHomeRounded className='icons1' />
           </NavLink>

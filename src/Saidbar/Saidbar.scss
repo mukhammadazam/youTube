@@ -5,8 +5,8 @@
   padding-right: 100px;
 }
 .minu1 {
-  width: 330px;
-  background-color: #fff;
+  display: none;
+  
 }
 .bar {
   position: sticky;
@@ -37,8 +37,29 @@
 @media screen and (max-width: 576px) {
   .minu {
     display: none;
+  
   }
   .bar {
     display: none;
   }
+
+
+}
+@media screen and (max-width: 500px){
+  .minu1 {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  width: 350px;
+  background-color: #fff !important;
+  top: 94%;
+  z-index: 111111111;
+}
+}
+@media screen and (max-width: 400px){
+.minu1{
+  top: 94%;
+  width: 330px;
+}
 }
