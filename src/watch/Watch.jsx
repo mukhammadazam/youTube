@@ -17,7 +17,7 @@ const Watch = () => {
     .map((i, el) => (
       <div key={el} className='pb-2'>
         <div className='md:flex md:items-center  '>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center ps-7 justify-center'>
             <iframe
               className='rounded'
               max-width='200'
@@ -41,7 +41,7 @@ const Watch = () => {
     ));
   return (
     <div className='flex items-start gap-3 '>
-      <img className='sticky top-24' src={left} alt='left' />
+      <img className='sticky ps-20 top-24' src={left} alt='left' />
       <div className='hidden sm:block'>{searchFunction}</div>
     </div>
   );

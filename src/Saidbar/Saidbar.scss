@@ -1,8 +1,10 @@
 .minu {
-  position: sticky;
-  top: 0;
-  height: 10vh;
-  padding-right: 100px;
+  position: fixed;
+  top: 85px;
+  height: 100vh;
+  z-index: 1111111;
+padding-right: 60px;
+  background-color: #fff;
 }
 .minu1 {
   display: none;
@@ -45,7 +47,7 @@
 
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 480px){
   .minu1 {
     display: block;
     display: flex;

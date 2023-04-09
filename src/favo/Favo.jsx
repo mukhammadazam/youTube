@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../context/Context";
-import fot from './fot.png'
+import fot from "./fot.png";
 const Favo = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
@@ -16,7 +16,7 @@ const Favo = () => {
     .slice(70, 90)
     .map((i, el) => (
       <div key={el} className='pb-2'>
-        <div className='md:flex md:items-center '>
+        <div className=' '>
           <div className='flex items-center justify-center'>
             <iframe
               className='rounded'
@@ -26,11 +26,11 @@ const Favo = () => {
               title='YouTube video player'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
           </div>
-          <div className=''>
-            <h3 className='md:text-start text-center ps-16 text-2xl'>
+          <div className=' md:w-96'>
+            <h3 className=' text-center text-2xl h-0'>
               {i?.video.author.title}
             </h3>
-            <p className='md:text-start text-center md:p-16'>
+            <p className=' text-center p-16'>
               Deleniti, harum recusandae, in, praesentium ab dolor nihil
               voluptates facere ipsam et ipsum eos distinctio molestias. Earum,
               dolore error.
@@ -40,9 +40,19 @@ const Favo = () => {
       </div>
     ));
   return (
-    <div className='flex items-start gap-3 '>
-      <img className='sticky top-24' src={fot} alt='left' />
-      <div className=' hidden sm:block'>{searchFunction}</div>
+    <div className='lg:flex  justify-center lg:items-start justify-between gap-3 '>
+      <div className=' ps-3 block sm:w-96 m-0-auto ifrem lg:sticky top-24 '>
+        <iframe
+          className=''
+          width='450'
+          height='600'
+          src='https://www.youtube.com/embed/3XqS84Xq7yM'
+          title='YouTube video player'
+          frameborder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowfullscreen></iframe>
+      </div>
+      <div className=' pt-3'>{searchFunction}</div>
     </div>
   );
 };

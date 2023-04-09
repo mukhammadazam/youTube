@@ -129,8 +129,7 @@ const Saidbar = () => {
         </div>
       )}
       <div className='bg-inherit '>
-        <div
-          className={`minu1 py-3   fixed  `}>
+        <div className={`minu1 py-3   fixed  `}>
           <NavLink to='/' className=''>
             <GrHomeRounded className='icons1' />
           </NavLink>
