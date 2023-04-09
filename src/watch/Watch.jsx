@@ -16,7 +16,7 @@ const Watch = () => {
     .slice(90, 115)
     .map((i, el) => (
       <div key={el} className='pb-2'>
-        <div className='md:flex md:items-center  '>
+        <div className='  '>
           <div className='flex items-center ps-7 justify-center'>
             <iframe
               className='rounded'
@@ -27,10 +27,10 @@ const Watch = () => {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
           </div>
           <div className=''>
-            <h3 className='md:text-start text-center ps-16 text-2xl'>
+            <h3 className=' text-center ps-16 text-2xl'>
               {i?.video.author.title}
             </h3>
-            <p className='md:text-start text-center md:p-16'>
+            <p className=' text-center md:p-16'>
               Deleniti, harum recusandae, in, praesentium ab dolor nihil
               voluptates facere ipsam et ipsum eos distinctio molestias. Earum,
               dolore error.
