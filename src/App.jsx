@@ -11,6 +11,7 @@ import Vedio from "./vedio/Vedio";
 import History from "./history/History";
 import Watch from "./watch/Watch";
 import Favo from "./favo/Favo";
+import Like from "./like/Like";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -29,6 +30,7 @@ function App() {
           <Route path='/history' element={<History />} />
           <Route path='/watch' element={<Watch />} />
           <Route path='/favo' element={<Favo />} />
+          <Route path='/like' element={<Like />} />
         </Routes>
       </div>
     </>

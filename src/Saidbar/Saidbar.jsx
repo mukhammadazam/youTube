@@ -80,7 +80,7 @@ const Saidbar = () => {
             <span className='bar__text block w-24'>Favourites</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/like' className='bar__link flex items-center'>
             <BiHeart className='icons' />
             <span className='bar__text block w-24'>LikedVideos</span>
           </NavLink>

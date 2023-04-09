@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { MyContext } from "../context/Context";
-const Favo = () => {
+import '../favo/Favo.scss'
+const Like = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
     .filter((value) => {
@@ -12,7 +13,7 @@ const Favo = () => {
         return value;
       }
     })
-    .slice(70, 90)
+    .slice(40, 70)
     .map((i, el) => (
       <div key={el} className='pb-2'>
         <div className=' '>
@@ -25,11 +26,11 @@ const Favo = () => {
               title='YouTube video player'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
           </div>
-          <div className=' md:w-96'>
+          <div className=' lg:w-96'>
             <h3 className=' text-center text-2xl h-0'>
               {i?.video.author.title}
             </h3>
-            <p className=' text-center p-16'>
+            <p className='text text-center p-16'>
               Deleniti, harum recusandae, in, praesentium ab dolor nihil
               voluptates facere ipsam et ipsum eos distinctio molestias. Earum,
               dolore error.
@@ -42,18 +43,15 @@ const Favo = () => {
     <div className='lg:flex  justify-center lg:items-start justify-between gap-3 '>
       <div className=' ps-3 block sm:w-96 m-0-auto ifrem lg:sticky top-24 '>
         <iframe
-          className='if'
+          className='sm:ps-28 if '
           width='450'
           height='600'
-          src='https://www.youtube.com/embed/3XqS84Xq7yM'
-          title='YouTube video player'
-          frameborder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowfullscreen></iframe>
+          src='https://www.youtube.com/embed/VOel6VdYtQk'
+          title='YouTube video player'></iframe>
       </div>
       <div className=' pt-3'>{searchFunction}</div>
     </div>
   );
 };
 
-export default Favo;
+export default Like;
