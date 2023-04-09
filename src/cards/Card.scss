@@ -1,6 +1,5 @@
 .cart {
  
-    overflow-x: scroll;
 }
        ::-webkit-scrollbar {
         width: 2px;
@@ -29,4 +28,14 @@
 .rasm{
     border-radius: 14px;
     height: 150px;
+    margin: 0;
+}
+@media screen and (max-width:576px) {
+    .wrapper{
+    width: 326px;
+}
+.rasm{
+    width: 326px;
+    height: 200px;
+}
 }

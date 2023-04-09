@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { MyContext } from "../context/Context";
-import left from './imgs/ja.png'
-const Watch = () => {
+import fot from './fot.png'
+const Favo = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
     .filter((value) => {
@@ -13,10 +13,10 @@ const Watch = () => {
         return value;
       }
     })
-    .slice(90, 115)
+    .slice(70, 90)
     .map((i, el) => (
       <div key={el} className='pb-2'>
-        <div className='md:flex md:items-center  '>
+        <div className='md:flex md:items-center '>
           <div className='flex items-center justify-center'>
             <iframe
               className='rounded'
@@ -41,10 +41,10 @@ const Watch = () => {
     ));
   return (
     <div className='flex items-start gap-3 '>
-      <img className='sticky top-24' src={left} alt='left' />
-      <div className='hidden sm:block'>{searchFunction}</div>
+      <img className='sticky top-24' src={fot} alt='left' />
+      <div className=' hidden sm:block'>{searchFunction}</div>
     </div>
   );
 };
 
-export default Watch;
+export default Favo;

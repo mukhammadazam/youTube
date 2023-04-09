@@ -31,18 +31,23 @@ const Card = () => {
             />
           </div>
           <Link>{i?.video.author.title}</Link>
+          <div className='flex'>
+            <p>80k views · 3 days ago</p>
+            <p>Dollie Blair</p>
+          </div>
         </div>
       );
     });
   return (
     <>
-      <img className='w-9 absolute sm:start-80' src={oval6} alt='img' />
-      <h1 className='ps-3 absolute start-20 sm:start-96 m-0 title'>
-        Dollie Blair
-      </h1>
+        <img className='w-9 absolute sm:start-80' src={oval6} alt='img' />
+        <h1 className='ps-3 absolute start-20 sm:start-96 m-0 title'>
+          Dollie Blair
+        </h1>
 
-      <div className='flex  gap-5 cart pt-10'>{searchFunction}</div>
-      <div className='flex  gap-5 cart pt-10'>{searchFunction}</div>
+      <div className='grid grid-rows-3 justify-center lg:grid-cols-4    grid-cols-1 gap-4 cart pt-10'>
+        {searchFunction}
+      </div>
     </>
   );
 };

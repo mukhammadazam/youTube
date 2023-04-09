@@ -25,7 +25,11 @@ const Shorts = () => {
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
       </div>
     ));
-  return <div>{searchFunction}</div>;
+  return (
+    <div>
+      {searchFunction}
+    </div>
+  );
 };
 
 export default memo(Shorts);

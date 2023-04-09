@@ -10,6 +10,7 @@ import Biblet from "./biblet/Biblet";
 import Vedio from "./vedio/Vedio";
 import History from "./history/History";
 import Watch from "./watch/Watch";
+import Favo from "./favo/Favo";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
           <Route path='/biblet' element={<Biblet />} />
           <Route path='/history' element={<History />} />
           <Route path='/watch' element={<Watch />} />
+          <Route path='/favo' element={<Favo />} />
         </Routes>
       </div>
     </>

@@ -35,7 +35,7 @@ const Vedio = () => {
         {!post ? (
           ""
         ) : (
-          <div className=' absolute bg-slate-600 pt-52 px-52 pb-20 end-52 rounded z-50'>
+          <div className=' absolute bg-slate-600 pt-52 px-52 pb-20 end-52 rounded z-auto'>
             <div className='flex items-center justify-center'>
               <FcDownload className='text-9xl' />
             </div>

@@ -75,7 +75,7 @@ const Saidbar = () => {
             <span className='bar__text block w-24'>WatchLater</span>
           </NavLink>
 
-          <NavLink className='bar__link flex items-center'>
+          <NavLink to='/favo' className='bar__link flex items-center'>
             <BsStar className='icons' />
             <span className='bar__text block w-24'>Favourites</span>
           </NavLink>
@@ -128,6 +128,23 @@ const Saidbar = () => {
           </div>
         </div>
       )}
+      <div className='bg-light'>
+        <div
+          className={`minu1 flex items-center  justify-between fixed top-50 bg-inherit`}>
+          <NavLink to='/' className=''>
+            <GrHomeRounded className='icons1' />
+          </NavLink>
+          <NavLink to='shorts' className=''>
+            <img className='icons1' src={shorts} alt='img' />
+          </NavLink>
+          <NavLink to='/pat' className=''>
+            <MdSubscriptions className='icons1' />
+          </NavLink>
+          <NavLink to='/biblet' className=''>
+            <MdOutlineVideoLibrary className='icons1' />
+          </NavLink>
+        </div>
+      </div>
     </>
   );
 };
