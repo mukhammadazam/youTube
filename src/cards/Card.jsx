@@ -24,16 +24,18 @@ const Card = () => {
       return (
         <div key={el}>
           <div className='wrapper'>
-            <img
-              className=' rasm block'
-              src={i.video.thumbnails[0].url}
-              alt='img'
-            />
+            <Link to={`/${i?.video.author.title}`}>
+              <img
+                className=' rasm block'
+                src={i.video.thumbnails[0].url}
+                alt='img'
+              />
+            </Link>
           </div>
           <Link>{i?.video.author.title}</Link>
           <div className='flex justify-center'>
-            <p >80k views · 3 days ago</p>
-            <p >Dollie Blair</p>
+            <p>80k views · 3 days ago</p>
+            <p>Dollie Blair</p>
           </div>
         </div>
       );

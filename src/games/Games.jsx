@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../context/Context";
+import { Link } from "react-router-dom";
 const Games = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
@@ -17,13 +18,14 @@ const Games = () => {
       <div key={el} className='pb-2'>
         <div className=' '>
           <div className='flex items-center justify-center'>
-            <img
-              className=' rasm block'
-              src={i.video.thumbnails[0].url}
-              alt='img'
-            />
+            <Link to={`/${i?.video.author.title}`} className={``}>
+              <img
+                className=' rasm block'
+                src={i.video.thumbnails[0].url}
+                alt='img'
+              />
+            </Link>
           </div>
-        
         </div>
       </div>
     ));

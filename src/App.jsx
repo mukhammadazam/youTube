@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate,Link } from "react-router-dom";
 import "./App.css";
 import Card from "./cards/Card";
 import Navbar from "./navbar/Navbar";
@@ -14,9 +13,11 @@ import Favo from "./favo/Favo";
 import Like from "./like/Like";
 import Musc from "./music/Musc";
 import Games from "./games/Games";
+import Useparam from "./useparam/Useparam";
+import { useState } from "react";
 
 function App() {
-  // const [count, setCount] = useState(0);
+
 
   return (
     <>
@@ -35,6 +36,8 @@ function App() {
           <Route path='/like' element={<Like />} />
           <Route path='/music' element={<Musc />} />
           <Route path='/games' element={<Games />} />
+          <Route path={`/:title`} element={<Useparam />} />
+          <Route path={`/games:title`} element={<Useparam />} />
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>
       </div>

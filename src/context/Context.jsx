@@ -13,25 +13,23 @@ export const Myprovayder = ({ children }) => {
     url: "https://youtube138.p.rapidapi.com/playlist/videos/",
     params: { id: "PLcirGkCPmbmFeQ1sm4wFciF03D_EroIfr", hl: "en", gl: "US" },
     headers: {
-      "X-RapidAPI-Key": "891c1edd4dmshfdd1a29b11443b6p1d75b5jsn879f3a6573f2",
+      "X-RapidAPI-Key": "70e8ccfcc0msh604e3f8cbec63fdp1bbdc8jsn411ce9f9cf7f",
       "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
     },
   };
   const geta = () => {
-
     axios
-    .request(options)
-    .then(function (response) {
-      setData(response.data.contents);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+      .request(options)
+      .then(function (response) {
+        setData(response.data.contents);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
   useEffect(() => {
-geta()
+    geta();
   }, []);
-
 
   // const obj = {
   //   id: 1111,
