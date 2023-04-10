@@ -13,7 +13,7 @@ const Games = () => {
         return value;
       }
     })
-    .slice(53, 94)
+    .slice(13, 54)
     .map((i, el) => (
       <div key={el} className='pb-2'>
         <div className=' '>
@@ -24,6 +24,9 @@ const Games = () => {
                 src={i.video.thumbnails[0].url}
                 alt='img'
               />
+              <h3 className=' text-start ps-16 text-1xl'>
+                {i?.video.author.title}
+              </h3>
             </Link>
           </div>
         </div>

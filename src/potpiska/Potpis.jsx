@@ -8,13 +8,13 @@ const Potpis = () => {
     <div className='grid grid-rows-3 justify-center  lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2  md:grid-cols-2'>
       {data.slice(21, 38).map((i, el) => (
         <div key={el} className='pb-10'>
-          <iframe
-            className='rounded'
-            width='250'
-            height='250'
-            src={`https://www.youtube.com/embed/${i.video.videoId}`}
-            title='YouTube video player'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+          <Link to={`/${i?.video.author.title}`} className={``}>
+            <img
+              className=' rasm block'
+              src={i.video.thumbnails[0].url}
+              alt='img'
+            />
+          </Link>
           <div className='flex items-center pt-3'>
             <img
               className='bord block'

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../context/Context";
+import { Link } from "react-router-dom";
 const Favo = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
@@ -17,13 +18,13 @@ const Favo = () => {
       <div key={el} className='pb-2'>
         <div className=' '>
           <div className='flex items-center justify-center'>
-            <iframe
-              className='rounded'
-              max-width='200'
-              height='200'
-              src={`https://www.youtube.com/embed/${i.video.videoId}`}
-              title='YouTube video player'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+            <Link to={`/${i?.video.author.title}`}>
+              <img
+                className=' rasm block'
+                src={i.video.thumbnails[0].url}
+                alt='img'
+              />
+            </Link>
           </div>
           <div className=' md:w-96'>
             <h3 className=' text-center text-2xl h-0'>

@@ -17,13 +17,13 @@ const Biblet = () => {
     .slice(51, 78)
     .map((i, el) => (
       <div key={el} className='pb-10'>
-        <iframe
-          className='rounded'
-          width='200'
-          height='200'
-          src={`https://www.youtube.com/embed/${i.video.videoId}`}
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+        <Link to={`/${i?.video.author.title}`} className={``}>
+          <img
+            className=' rasm block'
+            src={i.video.thumbnails[0].url}
+            alt='img'
+          />
+        </Link>
         <div className='flex items-center pt-3'>
           <img
             className='bord block'

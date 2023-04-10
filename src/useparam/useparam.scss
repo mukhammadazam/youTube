@@ -1,0 +1,46 @@
+.positish {
+  width: 700px;
+  height: 500px;
+}
+@media screen and (max-width: 1200px) {
+.positish {
+  width: 700px;
+  height: 500px;
+}
+}
+@media screen and (max-width: 992px) {
+  .positish {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .positish {
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .positish {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .positish {
+    width: 350px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .positish {
+    width: 326px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
