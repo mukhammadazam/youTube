@@ -1,7 +1,7 @@
-import axios from "axios";
 import { createContext, useState, useEffect } from "react";
-export const MyContext = createContext();
+import axios from "axios";
 
+export const MyContext = createContext();
 export const Myprovayder = ({ children }) => {
   const [togle, setTogle] = useState(false);
   const [vedio, setVedio] = useState(true);
@@ -31,13 +31,6 @@ export const Myprovayder = ({ children }) => {
     geta();
   }, []);
 
-  // const obj = {
-  //   id: 1111,
-  // }
-
-  // obj.name = `video${id}`
-
-  // console.log(obj);
 
   return (
     <MyContext.Provider
