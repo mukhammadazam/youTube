@@ -1,10 +1,9 @@
 import { MyContext } from "../context/Context";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { memo } from "react";
-import "./Card.scss";
 import oval6 from "../Saidbar/img/oval6.svg";
-import { Link } from "react-router-dom";
-
+import "./Card.scss";
 const Card = () => {
   const { data, search } = useContext(MyContext);
 
@@ -15,7 +14,6 @@ const Card = () => {
       } else if (
         value?.video.author.title.toLowerCase().includes(search?.toLowerCase())
       ) {
-        console.log(value);
         return value;
       }
     })

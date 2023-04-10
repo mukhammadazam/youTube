@@ -8,9 +8,9 @@ const Potpis = () => {
     <div className='grid grid-rows-3 justify-center  lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2  md:grid-cols-2'>
       {data.slice(21, 38).map((i, el) => (
         <div key={el} className='pb-10'>
-          <Link to={`/${i?.video.author.title}`} className={``}>
+          <Link to={`/${i?.video.author.title}`}>
             <img
-              className=' rasm block'
+              className=' rasm ras block'
               src={i.video.thumbnails[0].url}
               alt='img'
             />

@@ -1,9 +1,9 @@
-import { memo, useContext } from "react";
 import { MyContext } from "../context/Context";
+import { memo, useContext } from "react";
 import { Link } from "react-router-dom";
 import oval6 from "../Saidbar/img/oval6.svg";
 const Biblet = () => {
-  const { data, search, setSeach } = useContext(MyContext);
+  const { data, search } = useContext(MyContext);
   const searchFunction = data
     .filter((value) => {
       if (search === "") {

@@ -1,7 +1,7 @@
-import React from "react";
-import { useContext } from "react";
 import { MyContext } from "../context/Context";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import './Texts.scss';
 const History = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
@@ -21,9 +21,9 @@ const History = () => {
           <div className='flex items-center justify-center'>
             <Link to={`/${i?.video.author.title}`} className={``}>
               <img
-                className=' rasm block'
+                className=' rasm rasms block'
                 src={i.video.thumbnails[0].url}
-                alt='img'
+                alt='img' 
               />
             </Link>
           </div>
@@ -31,7 +31,7 @@ const History = () => {
             <h3 className='md:text-start text-center ps-16 text-2xl'>
               {i?.video.author.title}
             </h3>
-            <p className='md:text-start text-center md:p-16'>
+            <p className='md:text-start texts text-center  md:p-16'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
               recusandae praesentium aliquam perspiciatis accusamus voluptatibus
               nam reprehenderit eligendi atque! Quibusdam, id! Quidem et

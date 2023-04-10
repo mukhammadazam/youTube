@@ -1,7 +1,7 @@
-import { useContext } from "react";
 import { MyContext } from "../context/Context";
-import "../favo/Favo.scss";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import "../favo/Favo.scss";
 const Like = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data

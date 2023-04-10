@@ -3,7 +3,6 @@ import { BiLike, BiDislike } from "react-icons/bi";
 import { MdOutlineTextsms } from "react-icons/md";
 import { MyContext } from "../context/Context";
 import { FaShare } from "react-icons/fa";
-import { Link } from "react-router-dom";
 const Shorts = () => {
   const { data, search } = useContext(MyContext);
   const [like, setLike] = useState("5,7 тыс");

@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import { MyContext } from "../context/Context";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 const Musc = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data

@@ -41,17 +41,6 @@ const Favo = () => {
     ));
   return (
     <div className='lg:flex  justify-center lg:items-start justify-between gap-3 '>
-      <div className=' ps-3 block sm:w-96 m-0-auto ifrem lg:sticky top-24 '>
-        <iframe
-          className='if'
-          width='450'
-          height='600'
-          src='https://www.youtube.com/embed/3XqS84Xq7yM'
-          title='YouTube video player'
-          frameborder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowfullscreen></iframe>
-      </div>
       <div className=' pt-3'>{searchFunction}</div>
     </div>
   );

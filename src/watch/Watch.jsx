@@ -1,7 +1,7 @@
-import { useContext } from "react";
 import { MyContext } from "../context/Context";
-import left from "./imgs/ja.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import "./watch.scss";
 const Watch = () => {
   const { data, search } = useContext(MyContext);
   const searchFunction = data
@@ -41,9 +41,15 @@ const Watch = () => {
       </div>
     ));
   return (
-    <div className='flex items-start gap-3 '>
-      <img className='sticky ps-20 top-24' src={left} alt='left' />
-      <div className='hidden sm:block'>{searchFunction}</div>
+    <div className='lg:flex flex-column lg:items-start gap-3 '>
+      {data.slice(44, 45).map((i, el) => (
+        <div className='wrapper1' key={el}>
+          <Link to={`/${i?.video.author.title}`}>
+            <img className=' clas' src={i.video.thumbnails[0].url} alt='img' />
+          </Link>
+        </div>
+      ))}
+      <div className=' sm:block'>{searchFunction}</div>
     </div>
   );
 };
