@@ -6,7 +6,7 @@ import oval6 from "../Saidbar/img/oval6.svg";
 import "./Card.scss";
 const Card = () => {
   const { data, search } = useContext(MyContext);
-
+{console.log(data)}
   const searchFunction = data
     .filter((value) => {
       if (search === "") {

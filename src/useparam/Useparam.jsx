@@ -14,12 +14,38 @@ const Useparam = () => {
           .map((i, el) => (
             <div
               key={el}
-              className='fixed flex justify-center   lg:start-96 top-50'>
-              <iframe
-                className='rounded positish'
-                src={`https://www.youtube.com/embed/${i.video.videoId}`}
-                title='YouTube video player'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+              className='fixed flex justify-center bg-white   lg:start-96 top-50'>
+              <div className=''>
+                <iframe
+                  className='rounded positish'
+                  src={`https://www.youtube.com/embed/${i.video.videoId}`}
+                  title='YouTube video player'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+                <p className='sm:text-start py-3'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+                  quos?
+                </p>
+                <div className='flex items-center '>
+                  <img
+                    className=' rounded-full block'
+                    src={i.video.thumbnails[0].url}
+                    alt='img'
+                    height='50px'
+                    width='55px'
+                  />
+                  <div className='pe-10'>
+                    <Link className='sm:text-start text-slate-500 text-xl'>
+                      {i.video.author.title}
+                    </Link>
+                    <p className='block text-slate-400'>
+                      95,7 тыс. подписчиков
+                    </p>
+                  </div>
+                  <button className='btn text-white bg-black px-3 py-1 rounded'>
+                    подписаться
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
       </div>
