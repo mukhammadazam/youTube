@@ -16,18 +16,14 @@ const Useparam = () => {
               key={el}
               className='fixed flex justify-center bg-white   lg:start-96 top-50'>
               <div className=''>
-                <h2 className='hidden sm:block text-start text-2xl'>
-                  {i.video.title}
-                </h2>
                 <iframe
                   className='rounded positish'
                   src={`https://www.youtube.com/embed/${i.video.videoId}`}
                   title='YouTube video player'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
-                <p className='sm:text-start py-3'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-                  quos?
-                </p>
+                <h2 className='hidden sm:block text-start text-xl'>
+                  {i.video.title}
+                </h2>
                 <div className='flex items-center '>
                   <img
                     className=' rounded-full block'
