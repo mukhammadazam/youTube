@@ -1,10 +1,10 @@
 import { MdSubscriptions, MdOutlineVideoLibrary } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
 import { FiCopy, FiFile, FiChevronDown } from "react-icons/fi";
 import { GrHomeRounded, GrGamepad } from "react-icons/gr";
 import { VscFileSubmodule } from "react-icons/vsc";
 import { NavLink, Link } from "react-router-dom";
 import { MyContext } from "../context/Context";
-import { AiOutlineHome } from "react-icons/ai";
 import { DiCodeigniter } from "react-icons/di";
 import { CiMusicNote1 } from "react-icons/ci";
 import { useContext, useState } from "react";
@@ -30,7 +30,7 @@ const Saidbar = () => {
       {!togle ? (
         <div className={`minu`}>
           <NavLink to='/' className=''>
-            <GrHomeRounded className='icons1' />
+            <AiOutlineHome className='icons1' />
             <span className='pb-3 bar__text block w-8'>Главная</span>
           </NavLink>
           <NavLink to='shorts' className=''>

@@ -1,6 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsCameraReels } from "react-icons/bs";
-import { GiAbstract063 } from "react-icons/gi";
 import { MyContext } from "../context/Context";
 import { FiSearch } from "react-icons/fi";
 import userpic from "./imges/userpic.svg";

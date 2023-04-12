@@ -6,7 +6,6 @@ import oval6 from "../Saidbar/img/oval6.svg";
 import "./Card.scss";
 const Card = () => {
   const { data, search } = useContext(MyContext);
-{console.log(data)}
   const searchFunction = data
     .filter((value) => {
       if (search === "") {
@@ -30,7 +29,15 @@ const Card = () => {
               />
             </Link>
           </div>
-          <Link>{i?.video.author.title}</Link>
+          <div className='flex items-center pt-2'>
+            <img className="rounded-full"
+              src={i.video.thumbnails[0].url}
+              alt='img'
+              width='40px'
+              height='40px'
+            />
+            <Link className="ps-3">{i?.video.author.title}</Link>
+          </div>
           <div className='flex justify-center'>
             <p>80k views · 3 days ago</p>
             <p>Dollie Blair</p>
@@ -40,8 +47,8 @@ const Card = () => {
     });
   return (
     <>
-      <img className='w-9 absolute sm:start-80' src={oval6} alt='img' />
-      <h1 className='ps-3 absolute start-20 sm:start-96 m-0 title'>
+      <img className='w-9 absolute sm:start-52 start-5 lg:start-64' src={oval6} alt='img' />
+      <h1 className='ps-3 absolute start-20 sm:start-64 start-16 lg:start-80 m-0 title'>
         Dollie Blair
       </h1>
 

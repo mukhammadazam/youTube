@@ -5,9 +5,8 @@ export const MyContext = createContext();
 export const Myprovayder = ({ children }) => {
   const [togle, setTogle] = useState(false);
   const [vedio, setVedio] = useState(true);
-  const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-
+  const [data, setData] = useState([]);
   const options = {
     method: "GET",
     url: "https://youtube138.p.rapidapi.com/playlist/videos/",
@@ -30,7 +29,6 @@ export const Myprovayder = ({ children }) => {
   useEffect(() => {
     geta();
   }, []);
-
 
   return (
     <MyContext.Provider
