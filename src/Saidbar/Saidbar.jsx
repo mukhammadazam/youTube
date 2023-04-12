@@ -1,14 +1,14 @@
 import { MdSubscriptions, MdOutlineVideoLibrary } from "react-icons/md";
-import { AiOutlineHome } from "react-icons/ai";
 import { FiCopy, FiFile, FiChevronDown } from "react-icons/fi";
-import { GrHomeRounded, GrGamepad } from "react-icons/gr";
 import { VscFileSubmodule } from "react-icons/vsc";
 import { NavLink, Link } from "react-router-dom";
-import { MyContext } from "../context/Context";
+import { AiOutlineHome } from "react-icons/ai";
 import { DiCodeigniter } from "react-icons/di";
+import { MyContext } from "../context/Context";
 import { CiMusicNote1 } from "react-icons/ci";
 import { useContext, useState } from "react";
 import { SiTimescale } from "react-icons/si";
+import { GrGamepad } from "react-icons/gr";
 import { BiHeart } from "react-icons/bi";
 import { BsStar } from "react-icons/bs";
 import shorts from "./img/shorts.svg";
@@ -136,9 +136,9 @@ const Saidbar = () => {
         </div>
       )}
       <div className='bg-inherit '>
-        <div className={`minu1 py-3   fixed  `}>
+        <div className={`minu1 py-3   fixed px-3 `}>
           <NavLink to='/' className=''>
-            <GrHomeRounded className='icons1' />
+            <AiOutlineHome className='icons1' />
           </NavLink>
           <NavLink to='shorts' className=''>
             <img className='icons1' src={shorts} alt='img' />
