@@ -16,6 +16,9 @@ const Useparam = () => {
               key={el}
               className='fixed flex justify-center bg-white   lg:start-96 top-50'>
               <div className=''>
+                <h2 className='hidden sm:block text-start text-2xl'>
+                  {i.video.title}
+                </h2>
                 <iframe
                   className='rounded positish'
                   src={`https://www.youtube.com/embed/${i.video.videoId}`}
