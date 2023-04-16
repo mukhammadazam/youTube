@@ -3,12 +3,11 @@
   top: 85px;
   height: 100vh;
   z-index: 1111111;
-padding-right: 60px;
+  padding-right: 60px;
   background-color: #fff;
 }
 .minu1 {
   display: none;
-  
 }
 .bar {
   position: sticky;
@@ -39,29 +38,26 @@ padding-right: 60px;
 @media screen and (max-width: 576px) {
   .minu {
     display: none;
-  
   }
   .bar {
     display: none;
   }
-
-
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px) {
   .minu1 {
     display: block;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  width: 350px;
-  background-color: #fff !important;
-  top: 94%;
-  z-index: 111111111;
+    width: 400px;
+    background-color: #fff !important;
+    top: 90%;
+    z-index: 111111111;
+  }
 }
-}
-@media screen and (max-width: 400px){
-.minu1{
-  top: 94%;
-  width: 380px;
-}
+@media screen and (max-width: 400px) {
+  .minu1 {
+    top: 94%;
+    width: 360px;
+  }
 }
